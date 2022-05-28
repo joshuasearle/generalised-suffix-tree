@@ -15,16 +15,12 @@ class GeneralisedSuffixTree:
         self.j: int = 0
         self.last_j: int = -1
 
-        # self.global_pointer = Pointer(0)
-
         self.node_factory = NodeFactory(alphabet)
-        # self.edge_factory = EdgeFactory(strings[0], alphabet)
 
         self.root = self.node_factory(is_root=True)
         self.root.suffix_link = self.root
 
         self.active_node: Node = self.root
-        # self.remainder = Remainder(strings[0])
 
         self.pending: Node | None = None
 
